@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Class Glass - Transparência em Bolsas</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body style="background:#F5EBDD;">
+  <header class="header">
+    <div class="logo">Class Glass</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="inscricao-candidato.html">Candidatos</a>
+      <a href="oferta-bolsa.html">Instituições</a>
+      <button id="connectBtn" class="btn small">Conectar Wallet</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <aside class="left-column card">
+      <h3>Instituições</h3>
+      <p>Quer oferecer uma bolsa? <a href="oferta-bolsa.html" class="link-btn">Cadastrar nova oferta</a></p>
+    </aside>
+
+    <section class="center-column">
+      <h2>Ofertas de Bolsas</h2>
+      <div id="bolsasList" class="bolsa-grid">
+        <!-- cards serão inseridos dinamicamente -->
+      </div>
+    </section>
+
+    <aside class="right-column card">
+      <h3>Inscrição de Candidatos</h3>
+      <form id="miniCandidateForm">
+        <label>Nome
+          <input type="text" id="miniNome" required />
+        </label>
+        <label>E-mail
+          <input type="email" id="miniEmail" required />
+        </label>
+        <label>Área de Interesse
+          <input type="text" id="miniArea" />
+        </label>
+        <button type="submit" class="btn">Inscreva-se</button>
+      </form>
+    </aside>
+  </main>
+
+  <footer class="footer card">
+    <div>© <span id="year"></span> Class Glass</div>
+    <div class="footer-links">
+      <a href="#">Sobre</a> · <a href="#">Contato</a> · <a href="#">Política de Privacidade</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>
